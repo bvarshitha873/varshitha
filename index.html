@@ -1,196 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: linear-gradient(135deg, #6a11cb, #2575fc);
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    header img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 4px solid white;
-      margin-bottom: 15px;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 50px 20px;
-      max-width: 1000px;
-      margin: auto;
-      border-radius: 10px;
-      margin-top: 20px;
-    }
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    /* Profile */
-    #profile {
-      background: #74b9ff;
-      text-align: center;
-    }
-    #profile img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 4px solid white;
-    }
-    /* About */
-    #about {
-      background: #ffeaa7;
-    }
-    /* Skills */
-    #skills {
-      background: #a29bfe;
-    }
-    .skill {
-      margin: 15px 0;
-    }
-    .skill-name {
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-    .progress {
-      background: #dfe6e9;
-      border-radius: 20px;
-      overflow: hidden;
-    }
-    .progress-bar {
-      height: 20px;
-      border-radius: 20px;
-      text-align: center;
-      color: white;
-      font-size: 12px;
-      line-height: 20px;
-    }
-    .html { width: 90%; background: #e17055; }
-    .css { width: 80%; background: #00b894; }
-    .js { width: 70%; background: #fdcb6e; color: #333; }
-    /* Projects */
-    #projects {
-      background: #fab1a0;
-    }
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .project-card {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    .project-card h3 {
-      color: #d63031;
-    }
-    .project-card a {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 8px 15px;
-      background: #0984e3;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    /* Contact */
-    #contact {
-      background: #55efc4;
-    }
-    form {
-      max-width: 500px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-    }
-    input, textarea {
-      margin: 10px 0;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    button {
-      background: #6c5ce7;
-      color: white;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    footer {
-      background: #2d3436;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 20px;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Student Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
+
 <body>
 
+  <!-- Navbar -->
   <header>
-    <img src="my profile.jpg" alt="my photo">
-    <h1>My Portfolio</h1>
-    <nav>
-      <a href="#profile">Profile</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+    <nav class="navbar">
+      <div class="logo">MyPortfolio</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
     </nav>
   </header>
 
-  <section id="profile">
-    <h2>Profile</h2>
-    <p>Hello! I am [VARSHITHA B]. Welcome to my colorful portfolio website.</p>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Hello, I'm <span>Nanthini Mohan</span></h1>
+      <p>A passionate student learning web development</p>
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
   </section>
 
-  <section id="about">
+  <!-- About Section -->
+  <section id="about" class="about">
     <h2>About Me</h2>
-    <p style="text-align:center;">I am a passionate web developer who loves creating beautiful, responsive, and user-friendly websites using HTML, CSS, and JavaScript.</p>
-  </section>
-
-  <section id="skills">
-    <h2>My Skills</h2>
-    <div class="skill">
-      <div class="skill-name">HTML</div>
-      <div class="progress"><div class="progress-bar html">90%</div></div>
-    </div>
-    <div class="skill">
-      <div class="skill-name">CSS</div>
-      <div class="progress"><div class="progress-bar css">80%</div></div>
-    </div>
-    <div class="skill">
-      <div class="skill-name">JavaScript</div>
-      <div class="progress"><div class="progress-bar js">70%</div></div>
+    <div class="about-content">
+      <img src="Nanthini M2.jpeg" alt="Profile Photo">
+      <p>I am a student enthusiastic about technology and design.
+        I love building interactive, user-friendly web applications and exploring new tools in the tech world.</p>
     </div>
   </section>
 
-  <section id="projects">
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
     <h2>My Projects</h2>
-    <div class="projects">
+    <div class="project-grid">
       <div class="project-card">
         <h3>Project 1</h3>
-        <p>A responsive website design.</p>
+        <p>A simple responsive website.</p>
       </div>
       <div class="project-card">
         <h3>Project 2</h3>
@@ -203,28 +63,24 @@
     </div>
   </section>
 
-  <section id="contact">
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
     <h2>Contact Me</h2>
-    <form id="contactForm">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea rows="4" placeholder="Your Message" required></textarea>
-      <button type="submit">done</button>
+    <form id="contact-form">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
     </form>
-    <p id="msg" style="text-align:center; color:green; margin-top:10px;"></p>
+    <p id="form-status"></p>
   </section>
 
   <footer>
-    <p> My Portfolio</p>
+    <p>&copy; 2025 Your Name | All rights reserved</p>
   </footer>
 
-  <script>
-    document.getElementById("contactForm").addEventListener("submit", function(e){
-      e.preventDefault();
-      document.getElementById("msg").innerText = "Thanks! Your message has been sent.";
-      this.reset();
-    });
-  </script>
-
 </body>
+
 </html>
+
+
